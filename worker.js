@@ -1,7 +1,7 @@
 export default {
   fetch: async (req, env) => {
     
-    const ctx = env.CTX.fetch('https://ctx.do', req).then(res => res.json())
+    const ctx = await env.CTX.fetch('https://ctx.do', req).then(res => res.json())
     
     const { pathname, search } = new URL(req.url)
     let perf = []
