@@ -1,7 +1,7 @@
 export default {
   fetch: async (req, env) => {
     
-    const ctx = await env.CTX.fetch('https://ctx.do', req).then(res => res.json())
+    const { user } = await env.CTX.fetch('https://ctx.do', req).then(res => res.json())
     
     const { pathname, search } = new URL(req.url)
     let perf = []
@@ -19,15 +19,17 @@ export default {
     console.log(sorted)
  
     return new Response(JSON.stringify({
-      target: 'https:/' + pathname + search,
-      first,
-      min: sorted[0],
-      p25: sorted[4],
-      med: sorted[9],
-      avg: (perf.reduce((acc, x) => acc + x, 0)) / 20,
-      p75: sorted[15],
-      max: sorted[19],
-      ctx,
+      perf: {
+        target: 'https:/' + pathname + search,
+        first,
+        min: sorted[0],
+        p25: sorted[4],
+        med: sorted[9],
+        avg: (perf.reduce((acc, x) => acc + x, 0)) / 20,
+        p75: sorted[15],
+        max: sorted[19],
+      },
+      user,
     }, null, 2), { headers: { 'content-type': 'application/json; charset=utf-8' }})
   }
 }
