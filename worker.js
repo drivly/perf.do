@@ -28,6 +28,6 @@ export default {
       p25: sorted[4],
       p75: sorted[15],
       ctx,
-    }, null, 2), { headers: { 'content-type': 'application/json' }})
+    }, null, 2), { headers: { 'content-type': 'application/json; charset=utf-8' }})
   }
 }
