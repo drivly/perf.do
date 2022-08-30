@@ -1,12 +1,13 @@
 export default {
-  fetch: async req => {
+  fetch: async (req, env) => {
     
     const { pathname, search } = new URL(req.url)
     let perf = []
     
     for (let i = 0; i < 20; i++) {
       const startTime = Date.now()
-      const data = await fetch('https:/' + pathname + search, req)
+      // const data = await fetch('https:/' + pathname + search, req)
+      const data = await env.CTX.fetch('https:/' + pathname + search, req)
       const time = Date.now() - startTime
       perf.push(time)
     }
