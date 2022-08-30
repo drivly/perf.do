@@ -19,6 +19,16 @@ export default {
     console.log(sorted)
  
     return new Response(JSON.stringify({
+      api: {
+        icon: '⏱',
+        name: 'perf.do',
+        description: 'Performance Measurement',
+        url: 'https://perf.do',
+        endpoints: {
+          measure: 'https://perf.do/json.fyi',
+        },
+        memberOf: 'https://primitives.do',
+      },
       perf: {
         target: 'https:/' + pathname + search,
         first,
