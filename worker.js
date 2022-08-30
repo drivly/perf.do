@@ -22,11 +22,11 @@ export default {
       target: 'https:/' + pathname + search,
       first,
       min: sorted[0],
-      max: sorted[19],
-      avg: (perf.reduce((acc, x) => acc + x, 0)) / 20,
-      med: sorted[9],
       p25: sorted[4],
+      med: sorted[9],
+      avg: (perf.reduce((acc, x) => acc + x, 0)) / 20,
       p75: sorted[15],
+      max: sorted[19],
       ctx,
     }, null, 2), { headers: { 'content-type': 'application/json; charset=utf-8' }})
   }
