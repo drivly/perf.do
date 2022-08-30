@@ -1,13 +1,14 @@
 export default {
   fetch: async (req, env) => {
     
+    const ctx = await env.CTX.fetch('https://ctx.do')
+    
     const { pathname, search } = new URL(req.url)
     let perf = []
     
     for (let i = 0; i < 20; i++) {
       const startTime = Date.now()
-      // const data = await fetch('https:/' + pathname + search, req)
-      const data = await env.CTX.fetch('https:/' + pathname + search, req)
+      const data = await fetch('https:/' + pathname + search, req)
       const time = Date.now() - startTime
       perf.push(time)
     }
@@ -26,6 +27,7 @@ export default {
       med: sorted[9],
       p25: sorted[4],
       p75: sorted[15],
+      ctx,
     }, null, 2), { headers: { 'content-type': 'application/json' }})
   }
 }
