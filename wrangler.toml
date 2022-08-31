@@ -2,6 +2,7 @@ name = "perf-do"
 account_id = "b6641681fe423910342b9ffa1364c76d"
 route = { pattern = "*/*", zone_id = "1cc3a565c1a76c4e8f78f61f9cf56fb0" }
 main = "worker.js"
+usage_model = "unbound"
 compatibility_date = "2022-08-23"
 
 services = [
