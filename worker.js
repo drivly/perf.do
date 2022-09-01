@@ -13,10 +13,8 @@ export default {
       perf.push(time)
     }
     
-    console.log(perf)
     const first = perf[0]
     const sorted = perf.sort((a, b) => a - b)
-    console.log(sorted)
  
     return new Response(JSON.stringify({
       api: {
