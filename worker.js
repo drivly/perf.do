@@ -21,11 +21,16 @@ export default {
         icon: '⏱',
         name: 'perf.do',
         description: 'Performance Measurement',
-        url: 'https://perf.do',
+        url: 'https://perf.do/api',
+        type: 'https://apis.do/templates',
         endpoints: {
           measure: 'https://perf.do/json.fyi',
         },
-        memberOf: 'https://primitives.do',
+        site: 'https://perf.do',
+        login: 'https://perf.do/login',
+        signup: 'https://perf.do/signup',
+        subscribe: 'https://perf.do/subscribe',
+        repo: 'https://github.com/drivly/perf.do',
       },
       perf: {
         target: 'https:/' + pathname + search,
