@@ -20,7 +20,7 @@ export default {
       api: {
         icon: '⏱',
         name: 'perf.do',
-        description: 'Performance Measurement',
+        description: 'Performance Measurement API',
         url: 'https://perf.do/api',
         type: 'https://apis.do/templates',
         endpoints: {
