@@ -1,5 +1,6 @@
 # perf.do
-Measure Performance with Durable Objects
+
+Measure Performance of a backend API or website with `perf.do/:url`
 
 <https://perf.do/ctx.do>
 
