@@ -1,4 +1,4 @@
-# perf.do
+# Perf.do - Performance Measurement API
 
 Measure Performance of a backend API or website with `perf.do/:url`
 
@@ -9,7 +9,7 @@ Measure Performance of a backend API or website with `perf.do/:url`
   "api": {
     "icon": "⏱",
     "name": "perf.do",
-    "description": "Performance Measurement",
+    "description": "Performance Measurement API",
     "url": "https://perf.do/api",
     "type": "https://apis.do/templates",
     "endpoints": {
