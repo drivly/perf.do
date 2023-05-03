@@ -10,6 +10,7 @@ export default {
       const startTime = Date.now()
       const data = await fetch('https:/' + pathname + search, req)
       const time = Date.now() - startTime
+      await sleep(20)
       perf.push(time)
     }
     
@@ -49,3 +50,5 @@ export default {
     }, null, 2), { headers: { 'content-type': 'application/json; charset=utf-8' }})
   }
 }
+
+const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms))
