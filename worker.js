@@ -10,7 +10,7 @@ export default {
       const startTime = Date.now()
       const data = await fetch('https:/' + pathname + search, req)
       const time = Date.now() - startTime
-      await sleep(50)
+      await sleep(1)
       perf.push(time)
     }
     
