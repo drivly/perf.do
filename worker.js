@@ -42,6 +42,7 @@ export default {
         p75: sorted[15],
         max: sorted[19],
       },
+      results: perf
       user,
     }, null, 2), { headers: { 'content-type': 'application/json; charset=utf-8' }})
   }
