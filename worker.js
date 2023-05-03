@@ -13,6 +13,8 @@ export default {
       perf.push(time)
     }
     
+    const results = [...perf]
+    
     const first = perf[0]
     const sorted = perf.sort((a, b) => a - b)
  
@@ -42,7 +44,7 @@ export default {
         p75: sorted[15],
         max: sorted[19],
       },
-      results: perf,
+      results,
       user,
     }, null, 2), { headers: { 'content-type': 'application/json; charset=utf-8' }})
   }
